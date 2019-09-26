@@ -118,18 +118,74 @@ ADD COLUMN artist_id INTEGER;
 
 5. Write the SQL to add yourself as a fan of the Black Eyed Peas? ArtistId **169**
 
+```sql
+INSERT INTO fans (name, artist_id)
+VALUES ("Slava", 169);
+```
+
 6. How would you update your name in the fans table to be your new name?
+
+```sql
+UPDATE fans
+SET name = "DJ Slava"
+WHERE name = "Slava";
+```
 
 7. Write the SQL to return fans that are not fans of the black eyed peas.
 
+```sql
+SELECT *
+FROM fans
+WHERE artist_id != 169;
+```
+
 8. Write the SQL to change a fan's artist.
+
+```sql
+UPDATE fans
+SET artist_id = 169
+WHERE name = "Jason";
+```
 
 9. Write the SQL to display an artists name next to their album title
 
+```sql
+SELECT artists.name, albums.title
+FROM albums
+JOIN artists
+ON albums.artist_id = artists.id;
+```
+
 10. Write the SQL to display artist name, album name and number of tracks on that album
+
+```sql
+SELECT artists.name artist_name, albums.title album_title, COUNT(tracks.id) track_count
+FROM artists
+JOIN albums ON artists.id = albums.artist_id
+JOIN tracks ON tracks.album_id = albums.id
+GROUP BY albums.title;
+```
 
 11. Write the SQL to return the name of all of the artists in the 'Pop' Genre
 
+```sql
+SELECT artists.name
+FROM artists
+JOIN albums ON artists.id = albums.artist_id
+JOIN tracks ON albums.id = tracks.album_id
+JOIN genres ON genres.id = tracks.genre_id
+WHERE genres.name = "Pop"
+GROUP BY artists.name;
+```
+
+```sql
+SELECT DISTINCT artists.name
+FROM artists
+JOIN albums ON artists.id = albums.artist_id
+JOIN tracks ON albums.id = tracks.album_id
+JOIN genres ON genres.id = tracks.genre_id
+WHERE genres.name = "Pop";
+```
 
 ## BONUS (very hard)
 

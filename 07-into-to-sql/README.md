@@ -50,7 +50,7 @@
   - scroollllin' thru ur feedz
   - reading messages
 - Update
- - /*deleting a photo, comment, message, account (NOTHING IS DELETED ON THE INTERNET)
+ - *deleting a photo, comment, message, account (NOTHING IS DELETED ON THE INTERNET)
   - editing the caption
   - tagging someone after the fact
 - Destroy

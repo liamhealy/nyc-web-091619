@@ -12,17 +12,10 @@
 
 ## What can I do with data?
 
-
-- update
-- 
-
-
-
-
+ - SELL IT
 
 ## CRUD
 
-# SELL IT
 
 - Create
   - save

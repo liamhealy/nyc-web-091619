@@ -6,6 +6,10 @@ ActiveRecord::Base.establish_connection(
   database: "db/development.sqlite"
 )
 
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+  inflect.irregular 'hero', 'heroes'
+end
+
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 require_all 'app'

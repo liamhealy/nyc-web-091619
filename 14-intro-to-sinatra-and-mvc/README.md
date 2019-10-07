@@ -1,4 +1,4 @@
-## Intro to the Internet
+## Sinatra and MVC
 
 ### Questions
 
@@ -36,12 +36,38 @@
 
 ### MVC
 
+- structure/pattern
+- design pattern
+- architecture
+- handles communication between models (data/behavior), contollers (middle man, connects the view and the model), and view (front end, user-facing, representation of the data)
+
 - **Model** 
+  - communicating with the DB
+  - persistence
+  - anything "data" related
+  - business logic
+
 - **View**
+  - representation of the model - HTML, JSON
+  - user facing
+
 - **Controller**
+  - middle man
+  - it manages communication between a model and a view
+  - defines endpoints
+  - where you will define the response you will provide the client
 
 
 ### Sinatra
+- shortcuts for working with HTTP methods
+- written in Ruby
+- Sinatra is Gem
+- platform/framework for creating web applications
+- a Rack App
+- Convention over Configuration
+
+
+
 - light weight web application platform written in Ruby
   - a Rack app (it implements the Rack interface)
   - used to create dynamic web applications
